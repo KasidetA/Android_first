@@ -1,0 +1,8 @@
+ios_phone:
+  remote_url:      http://localhost:4723/wd/hub
+  platformName:    ios
+  automationName:  xcuitest
+  deviceName:      iPhone 16 Pro
+  platformVersion: '18.0'
+  udid:            EA26EACE-E08B-4A0B-A969-F5217ADE1FF7
+  bundleId:        com.saucelabs.mydemoapp.rn
