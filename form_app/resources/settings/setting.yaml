@@ -1,0 +1,9 @@
+android_phone: 
+  remote_url:       http://localhost:4723/wd/hub
+  automationName:   UiAutomator2
+  platformName:     Android
+  platformVersion:  '14'
+  deviceName:       emulator-5554
+  appPackage:       dev.flutter.formApp.form_app
+  appActivity:      dev.flutter.formApp.form_app.MainActivity
+delay_time:     30s

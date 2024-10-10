@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.13.0 on darwin)" generated="2024-10-10T04:35:02.827450" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/kasidet.a/Desktop/Robotframework/form_app/testcases/test.robot">
+<test id="s1-t1" name="TC01" line="7">
+<kw name="Open application" owner="common" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=${android_phone.remote_url}</arg>
+<arg>automationName=${android_phone.automationName}</arg>
+<arg>platformName=${android_phone.platformName}</arg>
+<arg>platformVersion=${android_phone.platformVersion}</arg>
+<arg>deviceName=${android_phone.deviceName}</arg>
+<arg>appPackage=${android_phone.appPackage}</arg>
+<arg>appActivity=${android_phone.appActivity}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-10-10T04:35:02.926529" elapsed="5.027092"/>
+</kw>
+<status status="PASS" start="2024-10-10T04:35:02.926325" elapsed="5.027524"/>
+</kw>
+<kw name="Tap sign in with http" owner="home_page">
+<kw name="Tap when ready" owner="common">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:09.010138" level="INFO">xpath criteria: //android.view.View[@content-desc="ThisIsTest"][1]</msg>
+<arg>${locator}</arg>
+<arg>${delay_time}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-10-10T04:35:07.955219" elapsed="1.055087"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:09.010730" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-10-10T04:35:09.211173" level="INFO">xpath criteria: //android.view.View[@content-desc="ThisIsTest"][1]</msg>
+<arg>${locator}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-10-10T04:35:09.010662" elapsed="0.200606"/>
+</kw>
+<arg>${sign_in_with_http}</arg>
+<status status="PASS" start="2024-10-10T04:35:07.954874" elapsed="1.256510"/>
+</kw>
+<status status="PASS" start="2024-10-10T04:35:07.954394" elapsed="1.257041"/>
+</kw>
+<kw name="Sign in with http" owner="sign_in_feature">
+<kw name="Tap email input text" owner="sign_in_page">
+<kw name="Tap when ready" owner="common">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:10.099037" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[1]</msg>
+<arg>${locator}</arg>
+<arg>${delay_time}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-10-10T04:35:09.212581" elapsed="0.886616"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:10.099632" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-10-10T04:35:10.313668" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[1]</msg>
+<arg>${locator}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-10-10T04:35:10.099548" elapsed="0.214258"/>
+</kw>
+<arg>${email_input}</arg>
+<status status="PASS" start="2024-10-10T04:35:09.212332" elapsed="1.101611"/>
+</kw>
+<status status="PASS" start="2024-10-10T04:35:09.212117" elapsed="1.101886"/>
+</kw>
+<kw name="Input email" owner="sign_in_page">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:10.316310" level="INFO">Typing text 'testuser@gmail.com' into text field 'xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[1]'</msg>
+<msg time="2024-10-10T04:35:10.370625" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[1]</msg>
+<arg>${email_input}</arg>
+<arg>${email}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-10-10T04:35:10.315025" elapsed="0.055687"/>
+</kw>
+<arg>${user.email}</arg>
+<status status="PASS" start="2024-10-10T04:35:10.314207" elapsed="0.056603"/>
+</kw>
+<kw name="Tap password input text" owner="sign_in_page">
+<kw name="Tap when ready" owner="common">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:10.401882" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[2]</msg>
+<arg>${locator}</arg>
+<arg>${delay_time}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-10-10T04:35:10.371498" elapsed="0.030537"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:10.402421" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-10-10T04:35:11.249542" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[2]</msg>
+<arg>${locator}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-10-10T04:35:10.402368" elapsed="0.847332"/>
+</kw>
+<arg>${password_input}</arg>
+<status status="PASS" start="2024-10-10T04:35:10.371273" elapsed="0.878523"/>
+</kw>
+<status status="PASS" start="2024-10-10T04:35:10.371008" elapsed="0.878837"/>
+</kw>
+<kw name="Input password" owner="sign_in_page">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:11.253322" level="INFO">Typing text '1234567890' into text field 'xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[2]'</msg>
+<msg time="2024-10-10T04:35:11.811530" level="INFO">xpath criteria: //android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[2]</msg>
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-10-10T04:35:11.250800" elapsed="0.560894"/>
+</kw>
+<arg>${user.password}</arg>
+<status status="PASS" start="2024-10-10T04:35:11.250068" elapsed="0.561814"/>
+</kw>
+<kw name="Tap sign in button" owner="sign_in_page">
+<kw name="Tap when ready" owner="common">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${locator}</arg>
+<arg>${delay_time}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-10-10T04:35:11.813579" elapsed="0.015986"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:11.829809" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<arg>${locator}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-10-10T04:35:11.829765" elapsed="1.208960"/>
+</kw>
+<arg>${sign_in_btn}</arg>
+<status status="PASS" start="2024-10-10T04:35:11.812898" elapsed="1.226230"/>
+</kw>
+<status status="PASS" start="2024-10-10T04:35:11.812300" elapsed="1.226955"/>
+</kw>
+<kw name="Capture unable popup" owner="sign_in_page">
+<kw name="Capture page" owner="common">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:13.254680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="unable_signin.png"&gt;&lt;img src="unable_signin.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${capture_file_name}</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-10-10T04:35:13.040913" elapsed="0.213898"/>
+</kw>
+<arg>unable_signin.png</arg>
+<status status="PASS" start="2024-10-10T04:35:13.040217" elapsed="0.214703"/>
+</kw>
+<status status="PASS" start="2024-10-10T04:35:13.039629" elapsed="0.215355"/>
+</kw>
+<kw name="Tap unable sign in popup" owner="sign_in_page">
+<kw name="Tap when ready" owner="common">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${locator}</arg>
+<arg>${delay_time}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-10-10T04:35:13.255863" elapsed="0.009616"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-10-10T04:35:13.265721" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<arg>${locator}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-10-10T04:35:13.265685" elapsed="0.688853"/>
+</kw>
+<arg>${unable_popup_ok_btn}</arg>
+<status status="PASS" start="2024-10-10T04:35:13.255562" elapsed="0.699063"/>
+</kw>
+<status status="PASS" start="2024-10-10T04:35:13.255220" elapsed="0.699444"/>
+</kw>
+<status status="PASS" start="2024-10-10T04:35:09.211775" elapsed="4.742917"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-10-10T04:35:13.954926" elapsed="0.269205"/>
+</kw>
+<status status="PASS" start="2024-10-10T04:35:02.926018" elapsed="11.298328"/>
+</test>
+<status status="PASS" start="2024-10-10T04:35:02.828013" elapsed="11.397085"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-10T04:35:09.010730" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-10-10T04:35:10.099632" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-10-10T04:35:10.402421" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-10-10T04:35:11.829809" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-10-10T04:35:13.265721" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+</errors>
+</robot>
