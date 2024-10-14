@@ -1,15 +1,15 @@
 *** Keywords ***
 Tap when ready
-    [Arguments]             ${locator}
-    AppiumLibrary.Wait Until Page Contains Element    ${locator}    ${waiting_time}
-    AppiumLibrary.click element       ${locator}
+    [Arguments]             ${locator}      ${delay_time}=${waiting_time}
+    AppiumLibrary.Wait until page contains element    ${locator}    ${delay_time}
+    AppiumLibrary.Click element       ${locator}
 
 Open test application
-    Run Keyword If    '${platform}' == 'android'    Open android application
+    BuiltIn.Run keyword if    '${platform}' == 'android'    Open android application
     ...     ELSE       Open ios application
 
 Open android application
-    AppiumLibrary.Open Application      remote_url=${android_phone.remote_url}  
+    AppiumLibrary.Open application      remote_url=${remote_url}  
     ...                                 automationName=${android_phone.automationName}  
     ...                                 platformName=${android_phone.platformName}
     ...                                 platformVersion=${android_phone.platformVersion}
@@ -18,7 +18,7 @@ Open android application
     ...                                 appActivity=${android_phone.appActivity}
 
 Open ios application
-    AppiumLibrary.Open Application      remote_url=${ios_phone.remote_url}
+    AppiumLibrary.Open application      remote_url=${remote_url}
     ...                                 platformName=${ios_phone.platformName}
     ...                                 automationName=${ios_phone.automationName}
     ...                                 deviceName=${ios_phone.deviceName}

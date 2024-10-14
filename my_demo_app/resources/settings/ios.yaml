@@ -1,5 +1,4 @@
 ios_phone:
-  remote_url:      http://localhost:4723/wd/hub
   platformName:    ios
   automationName:  xcuitest
   deviceName:      iPhone 16 Pro
