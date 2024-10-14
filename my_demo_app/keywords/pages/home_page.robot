@@ -5,5 +5,5 @@ Scroll To Product And Tap
     FOR    ${index}    IN RANGE    10
         ${result}=    BuiltIn.Run Keyword And Ignore Error    AppiumLibrary.Click element    ${locator}
         BuiltIn.Run Keyword If    '${result[0]}' == 'PASS'    Exit For Loop
-        AppiumLibrary.Swipe    70    1000    70    100    # ปรับค่าให้ตรงกับขนาดหน้าจอของคุณ
+        AppiumLibrary.Swipe    70    1000    70    100
     END
