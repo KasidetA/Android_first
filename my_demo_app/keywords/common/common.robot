@@ -8,7 +8,7 @@ Get text when ready
     [Arguments]    ${locator}
     AppiumLibrary.Wait until page contains element    ${locator}    ${waiting_time}
     ${got_text}    AppiumLibrary.Get text    ${locator}
-    BuiltIn.Set Suite Variable    ${expected_text}    ${got_text}
+    BuiltIn.Set suite variable    ${expected_text}    ${got_text}
 
 Scroll down the screen
         AppiumLibrary.Swipe    ${x_axis_start}      ${y_axis_start}     ${x_axis_end}       ${y_axis_end}
