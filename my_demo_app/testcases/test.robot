@@ -2,6 +2,7 @@
 Resource    ${CURDIR}/../resources/import.robot
 Test Setup          common.Open test application
 Test Teardown       AppiumLibrary.Close application
+
 *** Test Cases ***
 TC01-Choose product and verify product quantity on cart
     home_page.Scroll to product and tap
